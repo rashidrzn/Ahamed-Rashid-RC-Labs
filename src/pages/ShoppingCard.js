@@ -6,7 +6,7 @@ const ShoppingCard = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      fetch("http://localhost:3000/savedData")
+      fetch("http://localhost:8000/savedData")
         .then((res) => {
           return res.json();
         })

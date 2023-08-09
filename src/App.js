@@ -10,7 +10,7 @@ function App() {
       <Navbar />
       <div className="content-home">
         <Home />
-        <ShoppingCard />
+        {/* <ShoppingCard /> */}
       </div>
     </div>
   );

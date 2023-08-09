@@ -3,7 +3,6 @@ import Cart from "../components/Cart";
 
 const Home = () => {
   const [data, setData] = useState(null);
-  //   const [isPending, setIsPending] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
@@ -12,7 +11,6 @@ const Home = () => {
           return res.json();
         })
         .then((data) => {
-          //   setIsPending(false);
           setData(data);
           console.log(data);
         });

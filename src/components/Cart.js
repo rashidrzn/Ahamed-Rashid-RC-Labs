@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 // import myImage from "../assets/Ahamed Rashid.png";
 
 const Cart = ({ data }) => {
-  const [amount, setAmount] = useState("");
-  //   const [imageId, setImageId] = useState("");
+  const [amount, setAmount] = useState(" ");
+  const [dataa, setData] = useState(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
