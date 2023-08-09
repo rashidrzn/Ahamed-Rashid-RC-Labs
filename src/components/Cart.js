@@ -7,14 +7,17 @@ const Cart = ({ data }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const blog = { image, amount };
+    amount === ""
+      ? alert("Please enter an amount")
+      : console.log("Amount:", amount);
 
     fetch("http://localhost:8000/blogs/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(blog),
+      body: JSON.stringify(data),
     }).then(() => {
       // history.go(-1);
+      setAmount("");
       //   history.push('/');
     });
   };
@@ -43,8 +46,7 @@ const Cart = ({ data }) => {
             <form onSubmit={handleSubmit} className="input-fields">
               <div className="input-1">
                 <input
-                  type="text"
-                  value={amount}
+                  type="number"
                   placeholder="amount"
                   onChange={(e) => {
                     setAmount(e.target.value);
