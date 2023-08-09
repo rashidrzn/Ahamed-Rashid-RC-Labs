@@ -3,35 +3,26 @@ import React, { useState } from "react";
 
 const Cart = ({ data }) => {
   const [amount, setAmount] = useState("");
-  const [image, setImage] = useState("");
+  //   const [imageId, setImageId] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     amount === ""
       ? alert("Please enter an amount")
       : console.log("Amount:", amount);
-
-    fetch("http://localhost:8000/blogs/", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    }).then(() => {
-      // history.go(-1);
-      setAmount("");
-      //   history.push('/');
-    });
   };
 
   return (
     <section className="container-1">
       {data.map((d) => {
         return (
-          <div className="card" id={d.id}>
+          <div className="card" key={d.id}>
             <div className="card-image">
               {d.details.image !== null ? (
-                <img src={d.details.image} />
+                <img src={d.details.image} alt="image" />
               ) : (
-                <img src={d.details.image} />
+                <img src={d.details.image} alt="image" />
               )}
             </div>
             <div className="card-details">
