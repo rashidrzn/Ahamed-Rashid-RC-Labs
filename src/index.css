@@ -42,6 +42,8 @@
 .container-1 {
   display: flex;
   justify-content: center;
+  width: 90%;
+  margin: 0 auto;
   flex-wrap: wrap;
 }
 
@@ -51,6 +53,7 @@
   height: 400px;
   border: 2px solid beige;
   margin: 10px;
+  text-decoration: none;
   border-radius: 15px;
 }
 
@@ -92,8 +95,61 @@
   flex-direction: column;
   padding: 5px;
 }
+.card-details a {
+  text-decoration: none;
+}
 
 .card-details h2 {
   text-align: center;
   padding: 5px;
+}
+
+/* card - details and all */
+
+.detail-container {
+  max-width: 800px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.back-btn {
+  cursor: pointer;
+}
+.back-btn a {
+  text-decoration: none;
+}
+
+.ori-details {
+  display: flex;
+}
+
+.single-img,
+.single-description {
+  margin-top: 30px;
+  width: 50%;
+  height: 50vh;
+  padding: 1rem;
+  /* border: 1px solid wheat; */
+}
+
+.single-img img {
+  width: 100%;
+  height: 300px;
+}
+
+.single-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.input-fields {
+  align-items: center;
+}
+
+.input-fields .gre {
+  margin-right: -120px;
+  /* color: #872828; */
 }
