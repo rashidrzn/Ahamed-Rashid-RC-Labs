@@ -56,9 +56,8 @@ const Cart = ({ data }) => {
               </div>
               <div className="btn">
                 <button
-                  value={image}
-                  onChange={() => {
-                    console.log(d.details.image);
+                  onClick={() => {
+                    console.log(d.id);
                   }}
                 >
                   Submit
