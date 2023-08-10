@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-// import myImage from "../assets/Ahamed Rashid.png";
 
 const Cart = ({ data }) => {
   const [amount, setAmount] = useState(" ");
@@ -34,9 +33,8 @@ const Cart = ({ data }) => {
                   {d.details.manufactureYear}
                 </h2>
               </Link>
-
               {/* <h3>{d.details.color}</h3> */}
-              <p>{d.details.description}</p>
+              <p>{d.details.description} </p>
             </div>
             <form onSubmit={handleSubmit} className="input-fields">
               <div className="input-1">

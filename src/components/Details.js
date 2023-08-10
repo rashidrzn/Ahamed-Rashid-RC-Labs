@@ -25,15 +25,15 @@ const Details = ({ data }) => {
             Color:
             <div
               style={{
-                width: 30,
-                height: 30,
-                padding: 20,
+                width: 10,
+                height: 0,
+                padding: 10,
+                marginLeft: 5,
+                borderRadius: `50%`,
                 display: "inline",
-                color: `{data.details.color}`,
+                backgroundColor: data.details.color,
               }}
-            >
-              -
-            </div>
+            ></div>
           </h3>
           <form className="input-fields">
             <div className="input-1">
