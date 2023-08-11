@@ -19,7 +19,7 @@ const Cart = ({ data }) => {
         return (
           <div className="card" key={d.id}>
             <div className="card-image">
-              {d.details.image !== null ? (
+              {d.details.image && d.details.image !== null ? (
                 <img src={d.details.image} alt="image" />
               ) : (
                 <img src={d.details.image} alt="image" />
@@ -35,6 +35,17 @@ const Cart = ({ data }) => {
               </Link>
               {/* <h3>{d.details.color}</h3> */}
               <p>{d.details.description} </p>
+              <p style={{ marginTop: 5 }}>
+                Color:{" "}
+                <span
+                  style={{
+                    marginLeft: 5,
+                    paddingLeft: 10,
+                    borderRadius: `50px`,
+                    background: d.details.color,
+                  }}
+                ></span>
+              </p>
             </div>
             <form onSubmit={handleSubmit} className="input-fields">
               <div className="input-1">
@@ -45,7 +56,7 @@ const Cart = ({ data }) => {
                     setAmount(e.target.value);
                   }}
                 />
-                LKR
+                <span style={{ marginLeft: 5 }}>LKR</span>
               </div>
               <div className="btn">
                 <button
